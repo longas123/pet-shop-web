@@ -18,4 +18,20 @@ public class UnidadeRepository {
     public List<Unidade> listar(){
         return jdbcTemplate.query("select id, nome, endereco from tb_unidade", new UnidadeMapper());
     }
+
+    public void criar(Unidade unidade) {
+        //esse update maroto: faz insert, faz delete, faz update, qualquer coisa
+        //que não retorne dados.
+        jdbcTemplate.update("insert into tb_unidade (nome, endereco) values (? , ?)",
+            unidade.getNome(), unidade.getEndereco());
+    }
+    public void editar(Unidade unidade){
+        jdbcTemplate.update("update tb_unidade set nome=?, endereco=? where id=?",
+                unidade.getNome(),unidade.getEndereco(),unidade.getId());
+    }
+
+    public void deletar(Unidade unidade) {
+        jdbcTemplate.update("DELETE FROM tb_unidade WHERE id=?",
+                unidade.getId());
+    }
 }

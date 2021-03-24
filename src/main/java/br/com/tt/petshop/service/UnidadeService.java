@@ -18,4 +18,18 @@ public class UnidadeService {
     public List<Unidade> listar(){
         return unidadeRepository.listar();
     }
+    public void criar(Unidade unidade){
+        unidadeRepository.criar(unidade);
+    }
+
+    public void editar(Unidade unidade) {
+        unidadeRepository.editar(unidade);
+    }
+
+    public void deletar(Unidade unidade) {
+        unidadeRepository.deletar(unidade);
+    }
+
+ 
+
 }

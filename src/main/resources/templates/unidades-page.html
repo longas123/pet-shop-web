@@ -70,7 +70,7 @@
 <div id="addModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form th:action="@{/actions/}" method="post">
+            <form th:action="@{/actions/criar-unidade}" method="post">
                 <div class="modal-header">
                     <h4 class="modal-title">Adicionar novo</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -99,7 +99,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <input type="hidden" name="id" class="recordId">
-            <form th:action="@{/actions/}" method="post">
+            <form th:action="@{/actions/editar-unidade}" method="post">
                 <input type="hidden" name="id" class="recordId">
                 <div class="modal-header">
                     <h4 class="modal-title">Edição</h4>
@@ -128,7 +128,7 @@
 <div id="deleteModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form th:action="@{/actions/}" method="post">
+            <form th:action="@{/actions/deletar-unidade}" method="post">
                 <input type="hidden" name="id" class="recordId">
                 <div class="modal-header">
                     <h4 class="modal-title">Apagar</h4>
